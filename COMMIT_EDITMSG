@@ -1,0 +1,8 @@
+Initial commit: Simplified Trading Bot for Binance Futures Testnet
+
+- Market/Limit/Stop-Limit order placement (bot/orders.py)
+- Binance Futures Testnet client wrapper (bot/client.py)
+- Input validation layer (bot/validators.py)
+- Rotating file + console logging (bot/logging_config.py)
+- argparse CLI with --dry-run mode (cli.py)
+- README, requirements.txt, sample logs

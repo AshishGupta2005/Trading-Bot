@@ -1,3 +1,1 @@
-0000000000000000000000000000000000000000 1e8ab023b780bbe47e383b6e96a1a3ef60925b6a Trading Bot Dev <dev@example.com> 1783142219 +0000	commit (initial): Initial commit: Simplified Trading Bot for Binance Futures Testnet
-1e8ab023b780bbe47e383b6e96a1a3ef60925b6a 0000000000000000000000000000000000000000 Trading Bot Dev <dev@example.com> 1783142219 +0000	Branch: renamed refs/heads/master to refs/heads/main
-0000000000000000000000000000000000000000 1e8ab023b780bbe47e383b6e96a1a3ef60925b6a Trading Bot Dev <dev@example.com> 1783142219 +0000	Branch: renamed refs/heads/master to refs/heads/main
+ref: refs/heads/main
