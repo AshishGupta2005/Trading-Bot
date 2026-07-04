@@ -1,0 +1,9 @@
+# SAMPLE LOG -- illustrative only. See sample_market_order.log for context
+# on why this is a sample rather than a captured run.
+
+2026-07-04 12:05:11 | INFO     | trading_bot | Validated order request: {'symbol': 'BTCUSDT', 'side': 'SELL', 'order_type': 'LIMIT', 'quantity': 0.01, 'price': 62000.0, 'stop_price': None}
+2026-07-04 12:05:11 | DEBUG    | trading_bot.client | Initialized Binance Futures client against https://testnet.binancefuture.com/fapi
+2026-07-04 12:05:11 | INFO     | trading_bot.orders | Submitting order request: {'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': 0.01, 'price': 62000.0, 'timeInForce': 'GTC'}
+2026-07-04 12:05:11 | DEBUG    | trading_bot.client | REQUEST -> futures_create_order({'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': 0.01, 'price': 62000.0, 'timeInForce': 'GTC'})
+2026-07-04 12:05:12 | DEBUG    | trading_bot.client | RESPONSE <- futures_create_order(): {'orderId': 3450123789, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'x-def456', 'price': '62000.00', 'avgPrice': '0.00', 'origQty': '0.01', 'executedQty': '0.00', 'cumQty': '0.00', 'cumQuote': '0.00', 'timeInForce': 'GTC', 'type': 'LIMIT', 'side': 'SELL', 'updateTime': 1751630712456}
+2026-07-04 12:05:12 | INFO     | trading_bot.orders | Order submission succeeded: orderId=3450123789 status=NEW

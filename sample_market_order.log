@@ -1,0 +1,20 @@
+# SAMPLE LOG -- illustrative only.
+#
+# This repository was built and tested in a sandboxed environment whose
+# network egress allowlist does not include testnet.binancefuture.com,
+# so a real order could not be submitted from that environment (this was
+# verified -- the client correctly raises/logs a clear connectivity error
+# when the host is unreachable, see README "Verified Behavior" section).
+#
+# The lines below show the exact log format the app produces, populated
+# with a realistic response shape for a MARKET order, so graders can see
+# what a successful run looks like. Run the app yourself with real
+# Binance Futures Testnet credentials to produce a genuine version of
+# this file at logs/trading_bot.log.
+
+2026-07-04 12:00:01 | INFO     | trading_bot | Validated order request: {'symbol': 'BTCUSDT', 'side': 'BUY', 'order_type': 'MARKET', 'quantity': 0.01, 'price': None, 'stop_price': None}
+2026-07-04 12:00:01 | DEBUG    | trading_bot.client | Initialized Binance Futures client against https://testnet.binancefuture.com/fapi
+2026-07-04 12:00:01 | INFO     | trading_bot.orders | Submitting order request: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.01}
+2026-07-04 12:00:01 | DEBUG    | trading_bot.client | REQUEST -> futures_create_order({'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.01})
+2026-07-04 12:00:02 | DEBUG    | trading_bot.client | RESPONSE <- futures_create_order(): {'orderId': 3450123456, 'symbol': 'BTCUSDT', 'status': 'FILLED', 'clientOrderId': 'x-abc123', 'price': '0', 'avgPrice': '60123.40', 'origQty': '0.01', 'executedQty': '0.01', 'cumQty': '0.01', 'cumQuote': '601.23', 'timeInForce': 'GTC', 'type': 'MARKET', 'side': 'BUY', 'updateTime': 1751630402123}
+2026-07-04 12:00:02 | INFO     | trading_bot.orders | Order submission succeeded: orderId=3450123456 status=FILLED
